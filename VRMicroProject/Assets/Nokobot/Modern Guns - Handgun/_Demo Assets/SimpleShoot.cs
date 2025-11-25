@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -23,6 +26,24 @@ public class SimpleShoot : MonoBehaviour
     public AudioSource source;
     public AudioClip pewsound;
 
+    public Magazine magazine;
+    public XRBaseInteractor SockerInteractor;
+
+    public void AddMagazine(XRBaseInteractable interactable)
+    {
+
+    }
+
+    public void RemoveMagazine() 
+    {
+
+    }
+
+    public void slide()
+    {
+
+    }
+
 
     void Start()
     {
@@ -31,6 +52,8 @@ public class SimpleShoot : MonoBehaviour
 
         if (gunAnimator == null)
             gunAnimator = GetComponentInChildren<Animator>();
+
+        //ckerInteractor.SelectEnterEventArgs.addListener(AddMagazine);
     }
 
     public void PullTheTrigger()
